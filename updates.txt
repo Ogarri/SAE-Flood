@@ -1,0 +1,62 @@
+Projet de Bastien MORLION et de Lucas Guglielmetti
+
+Etape 1 :
+
+  Création du premier fichier modele_flood.py.
+  Ce fichier contient la classe Modele qui est “l’apparence” sous forme de matrice.
+  La taille de la matrice peut être choisie, elle est de base à 12 sur 12.
+  Cette classe prend en charge la taille de la matrice, les couleurs (sous forme de nombres) et le score du joueur.
+  On peut réinitialiser la matrice grâce à une fonction directement dans la classe.
+
+  Ensuite, le fichier vue_flood.py gère l’affichage (interface graphique) avec le module Tkinter.
+  Il affiche la matrice directement sur l’interface avec les couleurs.
+  Le nom de la fenêtre est 
+  Il affiche également le score et les boutons.
+  L’interface dispose de deux boutons : Nouveau et Au revoir.
+  Le bouton “Nouveau” utilise la fonction “reinitialiser” qui est dans le fichier modele_flood.py (la fonction qui réinitialise la matrice).
+  Le bouton au revoir ferme la fenêtre.
+  La classe dispose également d’une fonction qui redessine tous les boutons en cohérence avec le modèle.
+  La dernière fonction de la classe permet de démarrer la fenêtre.
+
+  Le troisième fichier ctrl_flood.py est là pour gérer les interactions avec la fenêtre (le changement des couleurs).
+  Il utilise les fonctions définies dans les classe des fichiers précédents.
+  Il crée une nouvelle partie et a une fonction qui utilise la fonction “demarre” définie dans la classe Vue.
+
+  Le dernier fichier flood.py fait office de main.py et permet de démarrer le programme dans un fichier à part. (le principe d’un fichier main)
+
+
+Etape 2 :
+
+  modèle_flood.py :
+    La matrices avec les couleurs est devenu une matrice de Cases.
+    Case est une nouvelle classe définie pour pouvoir développer les nouveaux algorithmes.
+    Maintenant tous les paramètres d une case sont enregistrés dans l objet dans la matrice.
+    La méthode voisines permet de lister toutes les cases voisines affin d utiliser la méthode pour changer la case et que la couleur se répand.
+    la diffusion se fait grave a la méthode pose_couleur.
+    La partie est finie quand toute les cases sont de la meme couleur.
+
+  vue_flood.py : 
+    Un message apparait quand la partie est finie.
+    Quand la partie est finie, les cases ne sont plus cliquables.
+    Une fois la partie relancée, les cases redeviennet cliquables.
+    La case en haut à gauche est la case de référence pour la couleur de la matrice.
+    La case en haut a gauche prend la couleur de la case cliquée et la matrice se met à jour.
+  
+  ctrl_flood.py : 
+    Le label de victoire redevient "" une fois que la partie est relancée.
+    Le reste est inchangé, seulement les fonctons dans les autres fichiers utilisée dans celui ci ont été modifiées.
+
+Etape 3 :
+  Ajout de la fonctione nombre_coups_max(self, nb_tests) dans le modele.
+  Cette fonction permet de tester le nombre de coups maximum pour finir la partie.
+  Elle prend en paramètre le nombre de tests à effectuer.
+  Elle retourne le nombre de coups maximum, le nombre de coups minimum et le nombre de coups moyen pour finir la partie.
+  La fonction est appelée dans le controleur et le résultat est affiché dans la vue.
+  La fonction est appelée à chaque fois que la partie commence.
+
+  Ajout également de la fonction compte_base(self, i, j, couleur, visited) dans le modele.
+  Cette fonction permet de compter le nombre de cases de la même couleur que la case de référence.
+  Elle prend en paramètre les coordonnées de la case, la couleur de la case de référence et une liste des cases déjà visitées.
+  Elle retourne le nombre de cases de la même couleur que la case de référence.
+  La fonction est appelée dans la fonction nombre_coups_max(self, nb_tests).
+

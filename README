@@ -1,0 +1,23 @@
+Objectif du jeu
+L'objectif principal du jeu du flood est de remplir la grille ou la carte avec une seule couleur en un minimum de mouvements. Les joueurs doivent choisir une couleur et "inonder" ou "flooder" les cases adjacentes pour étendre cette couleur sur toute la grille.
+
+Matériel
+Grille de jeu : Une grille carrée ou rectangulaire composée de cases de différentes couleurs.
+Couleurs : Un ensemble de couleurs distinctes utilisées pour remplir les cases de la grille.
+Règles du jeu
+Initialisation : Le jeu commence avec une grille de cases colorées de manière aléatoire.
+Tour de jeu :
+Le joueur sélectionne une couleur différente de celle des cases qu'il contrôle déjà.
+Toutes les cases adjacentes de la couleur choisie changent pour la nouvelle couleur.
+Propagation : La couleur choisie se propage à toutes les cases adjacentes de la même couleur initiale, continuant ainsi jusqu'à ce qu'elle ne puisse plus se propager.
+Conditions de victoire
+Le joueur gagne lorsqu'il parvient à remplir toute la grille avec une seule couleur. Le défi consiste à atteindre cet objectif en utilisant le moins de mouvements possible.
+
+Stratégie
+Choix de la couleur : Sélectionner la couleur qui maximise la surface inondée à chaque tour.
+Prévision : Planifier plusieurs tours à l'avance pour optimiser le nombre de mouvements nécessaires.
+Variantes
+Grilles de différentes tailles : Les grilles plus grandes augmentent la difficulté.
+Temps limité : Les joueurs doivent atteindre l'objectif dans un temps imparti.
+Nombre limité de coups : Les joueurs ont un nombre fixe de coups pour réussir.
+Le jeu du flood est apprécié pour sa simplicité de règles mais aussi pour la profondeur stratégique qu'il offre, rendant chaque partie unique et engageante.
